@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- HTML -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/storeLogo.png" />
+    <link rel="stylesheet" href="yairShoes.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Sofia"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>shoe match</title>
+  </head>
+  <body>
+    <div class="averything">
+      <div class="topnav">
+        <a class="menu" href="#"
+          ><img src="assets/homeLogo.png" style="width: 25px; height: 25px"
+        /></a>
+        <a class="menu" href="buyingCart.html"
+          ><img
+            src="assets/buyingCartLogo.png"
+            style="width: 25px; height: 25px"
+        /></a>
+        <div class="top">
+          <a class="menu" href="#">about</a>
+
+          <p
+            style="
+              /* color: rgb(255, 208, 0); */
+              color: rgb(0, 5, 66);
+              font-size: 20px;
+              /* margin: -20px; */
+              font-family: sofia;
+              margin-right: 30%;
+            "
+          >
+            find your own unique shoe!
+          </p>
+          <a href="LogInShoes.html" style="float: right">
+            <img
+              src="assets/loginLogo.png.png"
+              style="width: 60px; height: 60px"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="logo">
+          <img
+            style="width: 5vw; margin-right: 20%"
+            src="assets/storeLogo.png"
+          />
+          <p style="font-family: sofia; font-weight: 900; font-size: 25px">
+            shoes
+          </p>
+        </div>
+        <div class="search_box">
+          <button id="searchedButton" onclick="searched()">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+          <input
+            onkeydown="if (event.keyCode == 13)
+            document.getElementById('searchedButton').click()"
+            id="search_box_input"
+            type="text"
+            placeholder="Search..."
+          />
+          <button>
+            <i class="fa fa-microphone" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="filtersDiv">
+          <select class="filter" id="label" onchange="filter( )">
+            <option value="shoes">labels</option>
+            <option value="nike">nike</option>
+            <option value="adidas">adidas</option>
+            <option value="columbia">columbia</option>
+          </select>
+          <select class="filter" id="catagory" onchange="filter()">
+            <option value="shoes">catagories</option>
+            <option value="run">run</option>
+            <option value="trip">trip</option>
+            <option value="football">football</option>
+            <option value="leisure">leisure</option>
+          </select>
+        </div>
+      </div>
+      <div id="shoesCollection">
+        <p id="error">sorry, we can't find you're match</p>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="column">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsvhdc3Jq_3yIRMiEVYCat1zn7KZ0_VOR3zpOvf4VLRghippeyQ5Iu8toB8nBQ3ybGqJY&usqp=CAU"
+          style="width: 100%"
+          class="wdn-stretch rounded-corners"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST3CItv0wJbypZPhWKMLSww3aBUwEfUHEmew&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGNQQo5eikfAE9xa5d0tdKLRsW95nrgSI75w&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Mm-NZspsTm-0a65HC0bz6jLaMFOhuQzXPQ&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXxr-KSWilyLEEgZiVWb5GS61jBLfkBlgXjQ&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq9TmixaAO2XgyFyc3p2k58eP3-78KyS34KQ&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiGEfQKoCMknAvBqxDuIouT9HDe2Fyqm1KdA&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ2kSz1fHaTB5l7nXoOl-kIhUaJKgIoJcleg&usqp=CAU"
+          style="width: 100%; height: 10.5%"
+        />
+      </div>
+
+      <div class="column">
+        <img
+          src="https://media.istockphoto.com/id/141339427/photo/close-up-of-laced-sneaker.jpg?b=1&s=612x612&w=0&k=20&c=yRSixyOEmFISOQAE7PzWqYsktyQcjosLQq-XWYvMABY="
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGAYypkSLPQ5xy6Q0rrVrzTRfEnRcQ1Q1L8UtigJPZGpPT41Xt6DTiLUYGNWDPzUZQVW8&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg1Sc3WJgYoANYa0h3nDkyvm3OLTayFpUr9w&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBea42ZWZtTzaZECF-ltFGTkVlB_bigwjBjw&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxyxOjae6GT6yom2D-D9OvQSBiMKvR4C2Gzw&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6LdcP871csmaJ1am0H299EMvImDT_SrZ2JP4_GC_cVkUYno5O-oksfBZCdNtL6VEY5Rk&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrjtbhlhO2LQbRpKbAQdd4hFofaPAPqJkzFg&usqp=CAU"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="column">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrDR_qS6cxvxnh9s4VjBVBoqaZBfJBOqaiGw&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtNjC9F6yWP0TvRBi1_Zd_xCYvQ5W-nu1cqQ&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjgHTlu-eaXGc9TaG2vngRiY1_zLwSWAkyA&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe07FkMceBTtyyEdWKQFLSt0O-euUuur7D-ObpVJ0cZydOL_sJmvYTgRNGfB7nsxKncz0&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKv96SuV2SgclZvMyUO6b65I8slbSHMpa_5KQnUTbLIricHce_ha-ytswESDMLKH1eUoI&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtdpjx_JzAQqxji2yXTVhulrILaTHr-iRkWQ&usqp=CAU"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="column">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRI0XliIzBiWP82hvwZTr2ueH7C03-Q-8N5g&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8GeMdRmq4u-efBuB2KIID1Hf_dVtx80GJ4iQeGBToy2XjV6WhvxRlm5NKD6G16eW0AQ8&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFxzHttMUnNurPeiWBK4EDQ4KWaK82RPq6g&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://www.hdwallpapers.in/download/colorful_nike_neon_shoe_black_background_4k_5k_hd_neon-1366x768.jpg"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaNj2TFh1zU2ES7vczATKzvYUqXgNtJVV-vA&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgg1N-axfCJskreMvlYlxQLXTDHjPZ3C6Dw&usqp=CAU"
+          style="width: 100%"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI4esE9ntxwOd1KJxWJvtZs_B0BUqO5bS73A&usqp=CAU"
+          style="width: 100%; height: 21%"
+        />
+      </div>
+    </div> -->
+  </body>
+  <script src="shoes.js"></script>
+  <script src="./yairShoes.js"></script>
+</html>
