@@ -1,6 +1,6 @@
 function createShoes() {
   const shoesEllements = document.getElementById("shoesCollection");
-  // shoesEllements.classList.add("row");
+  shoesEllements.classList.add("row");
 
   for (let i = 0; i < shoes.length; i++) {
     const shoesEllementDiv = document.createElement("div");
@@ -18,7 +18,7 @@ function createShoes() {
     const shoesEllementNamePrice = document.createElement("p");
     const shoesEllementPrice = document.createElement("p");
 
-    shoesEllementPrice.innerText = shoes[i].price + " $";
+    shoesEllementPrice.innerText = shoes[i].price + "$";
     const shoesEllementName = document.createElement("p");
     shoesEllementName.innerText = shoes[i].name;
 
@@ -49,7 +49,11 @@ function searched() {
   let shoesMatches = 0;
 
   for (let i = 0; i < shoesElements.length; i++) {
-    if (!shoesElements[i].classList.contains(searched)) {
+    if (
+      !shoesElements[i]
+        .getElementsByClassName("shoesName")[0]
+        .innerText.includes(searched)
+    ) {
       shoesElements[i].style.display = "none";
     } else {
       shoesMatches++;
