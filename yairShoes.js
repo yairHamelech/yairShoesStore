@@ -64,7 +64,7 @@ function searched() {
   const errorMessage = document.getElementById("error");
   if (!shoesMatches) errorMessage.style.display = "block";
   else {
-    errorMessage.style.display = "none";
+     errorMessage.style.display = "none";
   }
 }
 
