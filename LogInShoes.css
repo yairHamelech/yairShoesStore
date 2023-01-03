@@ -105,11 +105,12 @@ button:hover {
   float: left;
   color: rgb(0, 5, 66);
 
-  padding: 25px 25px 25px;
+  padding: 25px 25px 24.2px;
 
   text-decoration: none;
 }
 .topnav a:hover {
+  padding: 25px;
   background-size: 20%;
   background: linear-gradient(
     to bottom,

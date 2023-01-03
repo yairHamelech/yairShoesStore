@@ -1,6 +1,6 @@
 function createShoes() {
   const shoesEllements = document.getElementById("shoesCollection");
-  shoesEllements.classList.add("row");
+  shoesEllements.classList.add("scrollbar");
 
   for (let i = 0; i < shoes.length; i++) {
     const shoesEllementDiv = document.createElement("div");
@@ -27,7 +27,6 @@ function createShoes() {
     shoesEllementNamePrice.classList.add("details");
     shoesEllementCatagories.classList.add("shoesCatagories");
 
-    shoesEllementDetails.classList.add("scrollbar");
     shoesEllementName.classList.add("shoesName");
 
     shoesEllementDiv.appendChild(shoesEllementImg);
@@ -64,7 +63,7 @@ function searched() {
   const errorMessage = document.getElementById("error");
   if (!shoesMatches) errorMessage.style.display = "block";
   else {
-     errorMessage.style.display = "none";
+    errorMessage.style.display = "none";
   }
 }
 
