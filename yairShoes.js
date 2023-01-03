@@ -26,6 +26,7 @@ function createShoes() {
     shoesEllementCatagories.innerText = shoes[i].catagories;
     shoesEllementNamePrice.classList.add("details");
     shoesEllementCatagories.classList.add("shoesCatagories");
+    shoesEllementDetails.classList.add("alldetails");
 
     shoesEllementName.classList.add("shoesName");
 
@@ -33,6 +34,7 @@ function createShoes() {
     shoesEllementDiv.appendChild(shoesEllementDetails);
     shoesEllements.appendChild(shoesEllementDiv);
     shoesEllementDetails.appendChild(shoesEllementNamePrice);
+    shoesEllementDetails.appendChild(shoesEllementName);
 
     shoesEllementNamePrice.appendChild(shoesEllementName);
     shoesEllementNamePrice.appendChild(shoesEllementPrice);

@@ -60,6 +60,14 @@ body {
   width: 300px;
   height: 300px;
 }
+.shoesImage:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(228, 199, 150),
+    rgb(206, 179, 134),
+    rgb(189, 157, 101)
+  );
+}
 
 .title {
   font-family: "Montserrat", sans-serif;
@@ -115,16 +123,25 @@ button {
   display: none;
 }
 .shoes {
-  padding: 4em;
   overflow: visible;
+  margin-left: 4em;
   display: inline-block;
-  width: 23%;
+  width: 20%;
 }
 .details {
-  width: 300px;
-  display: flex;
   justify-content: space-between;
+  width: 18em;
+  display: flex;
 }
+.alldetails:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(253, 253, 253),
+    rgb(226, 226, 226),
+    rgb(198, 198, 198)
+  );
+}
+
 .shoesCatagories {
   color: rgb(113, 113, 113);
   margin-top: -5%;
