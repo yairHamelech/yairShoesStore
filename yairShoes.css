@@ -57,8 +57,7 @@ body {
 
 .shoesImage {
   vertical-align: middle;
-  width: 300px;
-  height: 300px;
+  width: 100%;
 }
 .shoesImage:hover {
   background: linear-gradient(
