@@ -2,10 +2,11 @@
   background-color: rgb(234, 217, 187);
   align-items: center;
   font-weight: 900;
+  display: flex;
 }
 .menu {
   float: left;
-  color: rgb(0, 5, 66);
+  color: rgb(0, 0, 0);
 
   padding: 25px 20px;
   text-decoration: none;
