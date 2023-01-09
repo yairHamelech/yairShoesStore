@@ -1,4 +1,9 @@
-function createShoes() {
+function saveToLocalStorage(shoes) {
+  localStorage.setItem("shoes", JSON.stringify(shoes));
+}
+
+function createShoes(shoes) {
+  console.log(shoes);
   const shoesEllements = document.getElementById("shoesCollection");
   shoesEllements.classList.add("scrollbar");
 
@@ -12,7 +17,58 @@ function createShoes() {
     const shoesEllementImg = document.createElement("img");
     shoesEllementImg.src = shoes[i].image;
     shoesEllementImg.classList.add("shoesImage");
+
     shoesEllementImg.classList.add("column");
+
+    const addButtonEllement = document.createElement("button");
+    addButtonEllement.classList.add("addToCart");
+    addButtonEllement.innerText = "+";
+    addButtonEllement.style.fontSize = "50px";
+    addButtonEllement.style.display = "none";
+    addButtonEllement.onclick = (e) => {
+      if (shoes[i].isSelected) {
+        addButtonEllement.style.opacity = "0.6";
+      } else {
+        addButtonEllement.style.opacity = "1";
+      }
+
+      shoes[i].isSelected = !shoes[i].isSelected;
+      saveToLocalStorage(shoes);
+    };
+
+    const buttonDivEllement = document.createElement("div");
+    buttonDivEllement.appendChild(addButtonEllement);
+    buttonDivEllement.classList.add("buttonDiv");
+
+    shoesEllementDiv.onmouseenter = (e) => {
+      addButtonEllement.style.display = "block";
+      shoesEllementImg.style.filter = "blur(4px)";
+    };
+
+    shoesEllementDiv.onmouseleave = (e) => {
+      console.log("leave");
+
+      if (shoes[i].isSelected) {
+        addButtonEllement.style.display = "block";
+        shoesEllementImg.style.filter = "blur(4px)";
+      } else {
+        addButtonEllement.style.display = "none";
+        shoesEllementImg.style.filter = "";
+      }
+    };
+
+    if (shoes[i].isSelected) {
+      console.log("sss");
+      addButtonEllement.style.opacity = "1";
+      addButtonEllement.style.display = "block";
+      shoesEllementImg.style.filter = "blur(4px)";
+    }
+
+    const imgDivEllement = document.createElement("div");
+    imgDivEllement.classList.add("imgDiv");
+    imgDivEllement.appendChild(shoesEllementImg);
+    imgDivEllement.appendChild(buttonDivEllement);
+    shoesEllementDiv.appendChild(imgDivEllement);
 
     const shoesEllementDetails = document.createElement("p");
     const shoesEllementNamePrice = document.createElement("p");
@@ -30,7 +86,6 @@ function createShoes() {
 
     shoesEllementName.classList.add("shoesName");
 
-    shoesEllementDiv.appendChild(shoesEllementImg);
     shoesEllementDiv.appendChild(shoesEllementDetails);
     shoesEllements.appendChild(shoesEllementDiv);
     shoesEllementDetails.appendChild(shoesEllementNamePrice);
@@ -42,7 +97,10 @@ function createShoes() {
   }
 }
 
-createShoes();
+if (!localStorage.getItem("shoes")) saveToLocalStorage(shoes);
+const currentShoes = JSON.parse(localStorage.getItem("shoes"));
+
+createShoes(currentShoes);
 
 function searched() {
   const searched = document.getElementById("search_box_input").value;

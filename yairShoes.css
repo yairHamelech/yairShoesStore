@@ -19,6 +19,7 @@
   padding: 25px 20px;
   text-decoration: none;
 }
+
 .topnav a:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(72, 72, 72);
@@ -58,14 +59,51 @@ body {
 .shoesImage {
   vertical-align: middle;
   width: 100%;
+  background-color: white;
 }
 .shoesImage:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(228, 199, 150),
-    rgb(206, 179, 134),
-    rgb(189, 157, 101)
-  );
+  filter: blur(4px);
+  background-color: #000;
+}
+
+.imgDiv {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.buttonDiv {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.addToCart {
+  color: white;
+  font-size: 8vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width: 20%;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  box-shadow: 5px 20px 50px 5px #000;
+  border-radius: 100%;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.addToCart:hover {
+  opacity: 1;
+}
+.addToCart:double-button {
+  opacity: 1;
 }
 
 .title {
@@ -133,12 +171,6 @@ button {
   display: flex;
 }
 .alldetails:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(253, 253, 253),
-    rgb(226, 226, 226),
-    rgb(198, 198, 198)
-  );
 }
 
 .shoesCatagories {
