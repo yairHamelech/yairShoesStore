@@ -35,14 +35,13 @@ function createShoes(shoes) {
       shoes[i].isSelected = !shoes[i].isSelected;
       saveToLocalStorage(shoes);
     };
-
+    shoesEllementDiv.classList.add("shoesImage");
     const buttonDivEllement = document.createElement("div");
     buttonDivEllement.appendChild(addButtonEllement);
     buttonDivEllement.classList.add("buttonDiv");
 
     shoesEllementDiv.onmouseenter = (e) => {
       addButtonEllement.style.display = "block";
-      shoesEllementImg.style.filter = "blur(4px)";
     };
 
     shoesEllementDiv.onmouseleave = (e) => {
@@ -50,7 +49,7 @@ function createShoes(shoes) {
 
       if (shoes[i].isSelected) {
         addButtonEllement.style.display = "block";
-        shoesEllementImg.style.filter = "blur(4px)";
+        shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
       } else {
         addButtonEllement.style.display = "none";
         shoesEllementImg.style.filter = "";
@@ -58,10 +57,9 @@ function createShoes(shoes) {
     };
 
     if (shoes[i].isSelected) {
-      console.log("sss");
       addButtonEllement.style.opacity = "1";
       addButtonEllement.style.display = "block";
-      shoesEllementImg.style.filter = "blur(4px)";
+      shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
     }
 
     const imgDivEllement = document.createElement("div");
