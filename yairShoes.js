@@ -45,13 +45,12 @@ function createShoes(shoes) {
     };
 
     shoesEllementDiv.onmouseleave = (e) => {
-      console.log("leave");
-
       if (shoes[i].isSelected) {
         addButtonEllement.style.display = "block";
         shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
       } else {
         addButtonEllement.style.display = "none";
+
         shoesEllementImg.style.filter = "";
       }
     };
