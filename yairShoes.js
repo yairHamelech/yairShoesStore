@@ -27,9 +27,9 @@ function createShoes(shoes) {
     addButtonEllement.style.display = "none";
     addButtonEllement.onclick = (e) => {
       if (shoes[i].isSelected) {
-        addButtonEllement.style.opacity = "0.6";
+        addButtonEllement.style.opacity = 0.6;
       } else {
-        addButtonEllement.style.opacity = "1";
+        addButtonEllement.style.opacity = 1;
       }
 
       shoes[i].isSelected = !shoes[i].isSelected;
@@ -41,7 +41,7 @@ function createShoes(shoes) {
     buttonDivEllement.classList.add("buttonDiv");
 
     shoesEllementDiv.onmouseenter = (e) => {
-      addButtonEllement.style.display = "block";
+      addButtonEllement.style.display = "";
     };
 
     shoesEllementDiv.onmouseleave = (e) => {
@@ -56,7 +56,7 @@ function createShoes(shoes) {
     };
 
     if (shoes[i].isSelected) {
-      addButtonEllement.style.opacity = "1";
+      addButtonEllement.style.opacity = 1;
       addButtonEllement.style.display = "block";
       shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
     }

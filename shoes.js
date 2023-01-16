@@ -47,6 +47,7 @@ shoes = [
     image:
       "https://assets.adidas.com/images/w_1880,f_auto,q_auto/6ba06d5857954677a6c1af090158dcee_9366/GX9282_01_standard.jpg",
   },
+
   {
     label: "adidas",
     name: "ULTRABOOST 22",
@@ -77,6 +78,7 @@ shoes = [
     image:
       "https://assets.adidas.com/images/w_1880,f_auto,q_auto/930088bae777418bb382ae6f016a8195_9366/GX9855_01_standard.jpg",
   },
+
   {
     label: "adidas",
     catagories: ["trip"],
