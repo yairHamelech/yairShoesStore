@@ -1,4 +1,8 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+.login {
   --color-primary: #009579;
   --color-primary-dark: #007f67;
   --color-secondary: #252c6a;
@@ -6,14 +10,35 @@ body {
   --color-success: #4bb544;
   --border-radius: 4px;
 
-  margin: 0;
-  height: 100vh;
+  height: 88vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
   background: url(./background.jpg);
   background-size: cover;
+}
+.topnav {
+  background-color: rgb(234, 217, 187);
+  align-items: center;
+  font-weight: 900;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  float: left;
+  color: rgb(0, 0, 0);
+
+  padding: 25px 20px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(72, 72, 72);
 }
 
 .container {
@@ -127,4 +152,75 @@ body {
 
 .form__link:hover {
   text-decoration: underline;
+}
+
+.wrapper {
+  box-sizing: content-box;
+  display: inline-flex;
+  background: #fff;
+  height: 50px;
+  width: 300px;
+
+  border-radius: 5px;
+  padding: 20px 20px;
+}
+.wrapper .option {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #eeeeee;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option:hover {
+  border-color: #009579;
+}
+.wrapper .option:hover .dot {
+}
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #009579;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  border-color: #009579;
+  background-color: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot {
+  opacity: 1;
+  transform: scale(1);
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span {
+  color: rgb(117, 117, 117);
 }
