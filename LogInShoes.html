@@ -70,7 +70,8 @@
         <div class="form__input-group">
           <input
             type="text"
-            id="signupUsername"
+            pattern="(?=.*[a-z]{4,})(?=.*[A-Z]).{6,}"
+            title="Must contain at least one uppercase, four lowercase letter, and at least 6 or more characters"
             class="form__input"
             autofocus
             placeholder="Username"
@@ -79,7 +80,7 @@
         </div>
         <div class="form__input-group">
           <input
-            type="text"
+            type="email"
             class="form__input"
             autofocus
             placeholder="Email Address"
@@ -89,6 +90,9 @@
         <div class="form__input-group">
           <input
             type="password"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+            pattern=".{8,}"
+            title="Must contain at least three number, one uppercase, two lowercase letter, and at least 8 or more characters"
             class="form__input"
             autofocus
             placeholder="Password"
