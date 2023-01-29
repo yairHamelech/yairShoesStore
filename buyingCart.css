@@ -58,3 +58,53 @@ body {
 .shoesName {
   font-weight: 600;
 }
+
+.backshopping {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.015em;
+  font-size: 1em;
+  padding: 1em;
+  color: #fff;
+  background: #82ca9c;
+  font-weight: bold;
+  border-radius: 50px;
+  float: right;
+  margin: 0;
+
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s line;
+  display: inline-block;
+}
+.backshopping:hover {
+  background-color: #009579;
+}
+.heading {
+  white-space: nowrap;
+}
+
+.h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  display: inline-block;
+  font-weight: 600;
+  color: saddlebrown;
+  background-image: linear-gradient(#d99a5a, #d99a5a);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+  text-decoration: none;
+  margin: 0;
+}
+.shopping {
+}
+.heading:hover .h1 {
+  background-size: 100% 0.1em;
+}
+hr {
+  border-top: 1px solid #82ca9c;
+}
