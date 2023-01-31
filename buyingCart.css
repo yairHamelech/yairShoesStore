@@ -108,5 +108,6 @@ hr {
 .warning {
   color: red;
   letter-spacing: 0.2em;
+  margin-left: 8%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
