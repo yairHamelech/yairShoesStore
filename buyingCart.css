@@ -62,7 +62,7 @@ body {
 .backshopping {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  letter-spacing: -0.015em;
+  letter-spacing: 0.2em;
   font-size: 1em;
   padding: 1em;
   color: #fff;
@@ -70,13 +70,9 @@ body {
   font-weight: bold;
   border-radius: 50px;
   float: right;
-  margin: 0;
 
   -webkit-transition: all 0.25s linear;
-  -moz-transition: all 0.25s linear;
-  -ms-transition: all 0.25s linear;
-  -o-transition: all 0.25s linear;
-  transition: all 0.25s line;
+  margin-top: -2.2%;
   display: inline-block;
 }
 .backshopping:hover {
@@ -103,8 +99,14 @@ body {
 .shopping {
 }
 .heading:hover .h1 {
-  background-size: 100% 0.1em;
+  /* background-size: 100% 0.1em; */
 }
+
 hr {
   border-top: 1px solid #82ca9c;
+}
+.warning {
+  color: red;
+  letter-spacing: 0.2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
