@@ -1,33 +1,58 @@
 const shoes = JSON.parse(localStorage.getItem("shoes"));
 const currentShoes = shoes.filter((shoes) => shoes.isSelected);
 let clickCount = 0;
-
+let total = document.getElementById("total");
 createShoes(currentShoes);
-// function buy(buy) {
-//   buy.classList.add("payment");
-//   if (count == 0) {
-//     buy.style.display = "none";
-//   } else {
-//     buy.style.display = "block";
-//   }
-// }
-let count = 0;
+let totalprice = 0;
+
 for (let i = 0; i < currentShoes.length; i++) {
-  count++;
+  totalprice += currentShoes[i].price;
+  console.log(currentShoes[i].price);
+  console.log(totalprice);
 }
+total.innerText = totalprice.toFixed(2) + "$";
+
 let warning = document.getElementById("warning");
 warning.innerText =
   "you have nothing on your shopping cart, please add to cart a shoe first";
 warning.style.display = "none";
 
 document.querySelector(".btn").addEventListener("click", function (btn) {
-  if (btn.target.innerText == "buy now" && count == 0) {
+  clickCount++;
+  if (btn.target.innerText == "buy now" && currentShoes.length == 0) {
     btn.target.innerText = "continue shopping";
 
     warning.style.display = "inline-block";
-  }
-  clickCount++;
-  if (clickCount > 1 && count == 0) {
+  } else if (clickCount > 1 && currentShoes.length == 0) {
     window.location.assign("index.html");
+  } else {
+    document.getElementById("panel").style.display = "block";
   }
 });
+function showCN() {
+  var i = document.getElementById("pagarTarjetaNum").value;
+  document.getElementById("cardNumber").innerHTML = i;
+
+  if (i.length == 16) {
+    document.getElementById("pagarTarjetaMes").focus();
+  }
+}
+
+function showCE() {
+  var im = document.getElementById("pagarTarjetaMes").value;
+  var iy = document.getElementById("pagarTarjetaAno").value;
+  document.getElementById("cardMonth").innerHTML = im;
+  document.getElementById("cardYear").innerHTML = iy;
+
+  if (im.length == 2) {
+    document.getElementById("pagarTarjetaAno").focus();
+  }
+  if (iy.length == 4) {
+    document.getElementById("pagarTarjetaCVV").focus();
+  }
+}
+
+function showCV() {
+  var i = document.getElementById("pagarTarjetaCVV").value;
+  document.getElementById("cardCVV").innerHTML = i;
+}

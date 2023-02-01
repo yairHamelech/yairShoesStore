@@ -1,7 +1,7 @@
 function createShoes(shoes) {
   const shoesEllements = document.getElementById("shoesCollection");
   shoesEllements.classList.add("scrollbar");
-  let count = 0;
+
   for (let i = 0; i < shoes.length; i++) {
     const shoesEllementDiv = document.createElement("div");
     shoesEllementDiv.classList.add(shoes[i].label);
@@ -26,7 +26,6 @@ function createShoes(shoes) {
         addButtonEllement.style.opacity = 0.6;
       } else {
         addButtonEllement.style.opacity = 1;
-        count++;
       }
 
       shoes[i].isSelected = !shoes[i].isSelected;
