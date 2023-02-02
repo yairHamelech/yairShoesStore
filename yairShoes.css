@@ -122,10 +122,13 @@ button {
 
 #error {
   margin: auto;
+  letter-spacing: 0.2em;
   margin-top: 30vh;
   font-weight: 900;
-  font-size: 5em;
+  font-size: 3em;
   display: none;
+  text-align: center;
+  color: red;
 }
 .shoes {
   overflow: visible;
