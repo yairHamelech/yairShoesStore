@@ -1,6 +1,9 @@
 const shoes = JSON.parse(localStorage.getItem("shoes"));
 const currentShoes = shoes.filter((shoes) => shoes.isSelected);
+const shoesEllements = document.getElementById("shoesCollection");
+shoesEllements.classList.add("scrollbar");
 let clickCount = 0;
+
 let total = document.getElementById("total");
 createShoes(currentShoes);
 let totalprice = 0;
@@ -14,7 +17,7 @@ total.innerText = totalprice.toFixed(2) + "$";
 
 let warning = document.getElementById("warning");
 warning.innerText =
-  "you have nothing on your shopping cart, please add to cart a shoe first";
+  "you have nothing in your shopping cart, please add to cart a shoe first";
 warning.style.display = "none";
 
 document.querySelector(".btn").addEventListener("click", function (btn) {

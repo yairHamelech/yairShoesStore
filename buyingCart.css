@@ -37,7 +37,10 @@ body {
 .buttonDiv {
   display: none;
 }
-
+.close {
+  background-color: red;
+  border-radius: 30%;
+}
 .addToCart {
   display: none;
 }
@@ -49,7 +52,7 @@ body {
   top: 0;
   left: 0;
 
-  backdrop-filter: brightness(75%);
+  backdrop-filter: brightness(50%);
 }
 
 .shoes {
@@ -63,6 +66,10 @@ body {
   justify-content: space-between;
   width: 18em;
   display: flex;
+}
+\.scrollbar {
+  height: 34em;
+  overflow-y: scroll;
 }
 
 .shoesName {
