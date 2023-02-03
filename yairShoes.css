@@ -49,22 +49,9 @@ body {
 
   transition: all 1s ease;
 }
-.imgDiv:hover {
-  /* -webkit-filter: brightness(150%); */
-  filter: drop-shadow(0 0 1rem rgb(0, 7, 74));
-  transition: 1s ease;
-}
-
-.buttonDiv {
-  position: absolute;
-  top: 0;
-
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-}
 
 .addToCart {
+  box-sizing: none;
   color: white;
   font-size: 8vw;
   position: absolute;
@@ -72,7 +59,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 20%;
+  width: 19%;
   background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
   box-shadow: 5px 20px 50px 5px #000;
   border-radius: 50%;
@@ -136,6 +123,17 @@ button {
   margin-top: 3em;
   display: inline-block;
   width: 20%;
+  position: relative;
+  display: inline-block;
+
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.shoes:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .details {
   justify-content: space-between;
