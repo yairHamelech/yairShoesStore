@@ -18,7 +18,7 @@ function createShoes(shoes) {
     const addButtonEllement = document.createElement("button");
     addButtonEllement.classList.add("addToCart");
     addButtonEllement.innerText = "+";
-    addButtonEllement.style.fontSize = "";
+    addButtonEllement.style.fontSize = "50px";
     addButtonEllement.style.display = "none";
 
     addButtonEllement.onclick = (e) => {
