@@ -53,6 +53,7 @@ function createShoes(shoes) {
 
     if (shoes[i].isSelected) {
       addButtonEllement.style.opacity = 1;
+
       addButtonEllement.style.display = "block";
       // shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
     }

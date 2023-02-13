@@ -14,7 +14,7 @@
 
 .menu {
   float: left;
-  color: rgb(0, 5, 66);
+  color: rgb(0, 0, 0);
 
   padding: 25px 20px;
   text-decoration: none;
@@ -31,7 +31,14 @@
 *:before,
 *:after {
 }
+.me {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  letter-spacing: 0.1em;
 
+  font-weight: 600;
+  color: saddlebrown;
+}
 body {
   font-size: 16px;
   font-family: "Raleway", sans-serif;

@@ -95,4 +95,28 @@ shoes = [
     image:
       "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d1221ac8-447b-4e7e-8321-292c533cbb25/zoom-superrep-4-next-nature-hiit-class-shoes-sjgtD5.png",
   },
+  {
+    label: "nike",
+    catagories: ["run"],
+    name: " Nike Invincible 3",
+    price: 749.9,
+    image:
+      "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1bb4cfb7-baec-4d3f-b998-23430fdd71a6/invincible-3-road-running-shoes-z1GZJm.png",
+  },
+  {
+    label: "nike",
+    catagories: ["leisure"],
+    name: "Air Jordan 1 Zoom Comfort 2",
+    price: 669.9,
+    image:
+      "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/w_467,c_limit/e16a8772-0697-4a01-9ee7-5c4196f1fe84/air-jordan-1-zoom-comfort-2-shoes-SxTMMC.png",
+  },
+  {
+    label: "nike",
+    catagories: ["run"],
+    name: " Nike Flex Runner 2",
+    price: 539.9,
+    image:
+      "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/w_467,c_limit/a62021ab-4d0f-4c05-8132-f362566e1d97/flex-runner-2-older-road-running-shoes-Ft61jb.png",
+  },
 ];
