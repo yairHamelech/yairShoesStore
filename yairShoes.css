@@ -51,27 +51,24 @@ body {
 }
 
 .addToCart {
-  box-sizing: none;
-  color: white;
-  font-size: 8vw;
   position: absolute;
-  top: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 19%;
-  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-  box-shadow: 5px 20px 50px 5px #000;
-  border-radius: 50%;
+  top: 50%;
+  height: 50px;
+  width: 200px;
   opacity: 0.6;
-  transition: 0.3s;
-}
-.addToCart:hover {
-  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 25px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+
+  background-color: rgb(234, 217, 187);
 }
 
 .container {
-  margin-inline: 20px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -133,14 +130,12 @@ button {
 }
 
 .shoes:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
 }
 .details {
   justify-content: space-between;
   width: 18em;
   display: flex;
-}
-.alldetails:hover {
 }
 
 .shoesName {
@@ -172,4 +167,10 @@ hr {
   width: 50%;
 }
 option:hover {
+}
+.sum {
+  position: absolute;
+  top: 70%;
+  left: 120%;
+  margin: -50px 0 0 -50px;
 }

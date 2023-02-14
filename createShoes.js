@@ -1,6 +1,7 @@
 function createShoes(shoes) {
   const shoesEllements = document.getElementById("shoesCollection");
   shoesEllements.classList.add("scrollbar");
+  let sum = 0;
 
   for (let i = 0; i < shoes.length; i++) {
     const shoesEllementDiv = document.createElement("div");
@@ -23,9 +24,23 @@ function createShoes(shoes) {
 
     addButtonEllement.onclick = (e) => {
       if (shoes[i].isSelected) {
-        addButtonEllement.style.opacity = 0.6;
+        addButtonEllement.style.top = "50%";
+        addButtonEllement.style.width = "200px";
+        addButtonEllement.style.height = "50px";
+        addButtonEllement.style.left = "50%";
+        addButtonEllement.style.opacity = "0.6";
+        addButtonEllement.style.borderRadius = "25px";
+        sum--;
+        document.getElementById("demo").innerText = sum.toString();
       } else {
-        addButtonEllement.style.opacity = 1;
+        sum++;
+        document.getElementById("demo").innerText = sum.toString();
+        addButtonEllement.style.borderRadius = "0px";
+        addButtonEllement.style.opacity = "0.6";
+        addButtonEllement.style.top = "50%";
+        addButtonEllement.style.width = "100%";
+        addButtonEllement.style.height = "100%";
+        addButtonEllement.style.left = "50%";
       }
 
       shoes[i].isSelected = !shoes[i].isSelected;
@@ -43,16 +58,20 @@ function createShoes(shoes) {
     shoesEllementDiv.onmouseleave = (e) => {
       if (shoes[i].isSelected) {
         addButtonEllement.style.display = "block";
-        // shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
       } else {
         addButtonEllement.style.display = "none";
-
-        // shoesEllementImg.style.filter = "";
       }
     };
 
     if (shoes[i].isSelected) {
-      addButtonEllement.style.opacity = 1;
+      sum++;
+
+      addButtonEllement.style.borderRadius = "0px";
+      addButtonEllement.style.opacity = "0.6";
+      addButtonEllement.style.top = "50%";
+      addButtonEllement.style.width = "100%";
+      addButtonEllement.style.height = "100%";
+      addButtonEllement.style.left = "50%";
 
       addButtonEllement.style.display = "block";
       // shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
