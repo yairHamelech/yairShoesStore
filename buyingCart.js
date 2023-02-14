@@ -10,8 +10,6 @@ let totalprice = 0;
 
 for (let i = 0; i < currentShoes.length; i++) {
   totalprice += currentShoes[i].price;
-  console.log(currentShoes[i].price);
-  console.log(totalprice);
 }
 total.innerText = totalprice.toFixed(2) + "$";
 
