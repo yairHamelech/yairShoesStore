@@ -12,6 +12,15 @@
   justify-content: space-between;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(356deg);
+  }
+}
+
 .menu {
   float: left;
   color: rgb(0, 0, 0);

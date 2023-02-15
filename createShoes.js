@@ -1,7 +1,7 @@
 function createShoes(shoes) {
   const shoesEllements = document.getElementById("shoesCollection");
   shoesEllements.classList.add("scrollbar");
-  let sum = 0;
+  let sum = shoes.filter((shoes) => shoes.isSelected).length;
 
   for (let i = 0; i < shoes.length; i++) {
     const shoesEllementDiv = document.createElement("div");
@@ -39,10 +39,8 @@ function createShoes(shoes) {
         addButtonEllement.style.borderRadius = "25px";
         contact.style.display = "";
         sum--;
-        document.getElementById("demo").innerText = sum.toString();
       } else {
         sum++;
-        document.getElementById("demo").innerText = sum.toString();
         addButtonEllement.style.borderRadius = "0px";
         addButtonEllement.style.opacity = "0.6";
         addButtonEllement.style.top = "50%";
@@ -50,10 +48,15 @@ function createShoes(shoes) {
         addButtonEllement.style.height = "100%";
         addButtonEllement.style.left = "50%";
         contact.style.display = "none";
+        document.getElementById("cartLogo").style.animation = "";
+        void document.getElementById("cartLogo").offsetWidth;
+        document.getElementById("cartLogo").style.animation =
+          "rotation 1s linear";
       }
 
       shoes[i].isSelected = !shoes[i].isSelected;
       saveToLocalStorage(shoes);
+      document.getElementById("demo").innerText = sum;
     };
     shoesEllementDiv.classList.add("shoesImage");
     const buttonDivEllement = document.createElement("div");
@@ -108,8 +111,6 @@ function createShoes(shoes) {
     };
 
     if (shoes[i].isSelected) {
-      sum++;
-
       addButtonEllement.style.borderRadius = "0px";
       addButtonEllement.style.opacity = "0.6";
       addButtonEllement.style.top = "50%";
@@ -151,5 +152,9 @@ function createShoes(shoes) {
     shoesEllementNamePrice.appendChild(shoesEllementName);
     shoesEllementNamePrice.appendChild(shoesEllementPrice);
     shoesEllementDetails.appendChild(shoesEllementCatagories);
+    const element = document.getElementById("demo");
+    if (element) {
+      element.innerText = sum;
+    }
   }
 }
