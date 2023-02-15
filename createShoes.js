@@ -15,7 +15,14 @@ function createShoes(shoes) {
     shoesEllementImg.classList.add("shoesImage");
 
     shoesEllementImg.classList.add("column");
+    const shoesEllementContact = document.createElement("p");
+    shoesEllementContact.innerText = shoes[i].contact;
 
+    const contact = document.createElement("button");
+    contact.classList.add("description");
+    contact.innerText = "description";
+    contact.style.fontSize = "20px";
+    contact.style.display = "none";
     const addButtonEllement = document.createElement("button");
     addButtonEllement.classList.add("addToCart");
     addButtonEllement.innerText = "+";
@@ -24,12 +31,13 @@ function createShoes(shoes) {
 
     addButtonEllement.onclick = (e) => {
       if (shoes[i].isSelected) {
-        addButtonEllement.style.top = "50%";
+        addButtonEllement.style.top = "60%";
         addButtonEllement.style.width = "200px";
         addButtonEllement.style.height = "50px";
         addButtonEllement.style.left = "50%";
         addButtonEllement.style.opacity = "0.6";
         addButtonEllement.style.borderRadius = "25px";
+        contact.style.display = "";
         sum--;
         document.getElementById("demo").innerText = sum.toString();
       } else {
@@ -41,6 +49,7 @@ function createShoes(shoes) {
         addButtonEllement.style.width = "100%";
         addButtonEllement.style.height = "100%";
         addButtonEllement.style.left = "50%";
+        contact.style.display = "none";
       }
 
       shoes[i].isSelected = !shoes[i].isSelected;
@@ -49,13 +58,48 @@ function createShoes(shoes) {
     shoesEllementDiv.classList.add("shoesImage");
     const buttonDivEllement = document.createElement("div");
     buttonDivEllement.appendChild(addButtonEllement);
+    buttonDivEllement.appendChild(contact);
     buttonDivEllement.classList.add("buttonDiv");
 
     shoesEllementDiv.onmouseenter = (e) => {
-      addButtonEllement.style.display = "";
+      if (contact.innerText == "description") {
+        addButtonEllement.style.display = "";
+      }
+      if (!shoes[i].isSelected) {
+        contact.style.display = "";
+      }
+    };
+    contact.onclick = (e) => {
+      if (contact.style.width == "200px") {
+        contact.style.borderRadius = "0px";
+        contact.style.opacity = "0.6";
+        contact.style.top = "50%";
+        contact.style.width = "100%";
+        contact.style.height = "100%";
+        contact.style.left = "50%";
+        contact.innerText = shoesEllementContact.innerText;
+        addButtonEllement.style.display = "none";
+      } else {
+        contact.style.borderRadius = "25px";
+        contact.style.opacity = "0.6";
+        contact.style.top = "42%";
+        contact.style.width = "200px";
+        contact.style.height = "50px";
+        contact.style.left = "50%";
+        contact.innerText = "description";
+        addButtonEllement.style.display = "";
+      }
     };
 
     shoesEllementDiv.onmouseleave = (e) => {
+      contact.style.borderRadius = "25px";
+      contact.style.opacity = "0.6";
+      contact.style.top = "42%";
+      contact.style.width = "200px";
+      contact.style.height = "50px";
+      contact.style.left = "50%";
+      contact.innerText = "description";
+      contact.style.display = "none";
       if (shoes[i].isSelected) {
         addButtonEllement.style.display = "block";
       } else {

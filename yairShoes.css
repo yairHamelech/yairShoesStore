@@ -57,7 +57,24 @@ body {
   align-items: center;
   justify-content: center;
   left: 50%;
-  top: 50%;
+  top: 60%;
+  height: 50px;
+  width: 200px;
+  opacity: 0.6;
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 25px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+
+  background-color: rgb(234, 217, 187);
+}
+.description {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 42%;
   height: 50px;
   width: 200px;
   opacity: 0.6;
@@ -80,7 +97,6 @@ body {
   border-radius: 40px;
   background-color: rgb(234, 217, 187);
   float: left;
-  margin-top: 20px;
 }
 
 input {
@@ -162,9 +178,7 @@ filter option:hover {
 .logo {
   display: flex;
 }
-hr {
-  width: 50%;
-}
+
 option:hover {
 }
 .sum {
