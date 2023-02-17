@@ -18,6 +18,11 @@ function createShoes(shoes) {
     const shoesEllementContact = document.createElement("p");
     shoesEllementContact.innerText = shoes[i].contact;
 
+    const FavoriteElement = document.createElement("button");
+
+    FavoriteElement.classList.add("tuhb");
+    FavoriteElement.style.content = "\f004";
+
     const contact = document.createElement("button");
     contact.classList.add("description");
     contact.innerText = "description";
@@ -28,6 +33,20 @@ function createShoes(shoes) {
     addButtonEllement.innerText = "+";
     addButtonEllement.style.fontSize = "50px";
     addButtonEllement.style.display = "none";
+    FavoriteElement.onclick = (e) => {
+      if (shoes[i].favorite == true) {
+        shoes[i].favorite = false;
+        FavoriteElement.style.color = "#aaa";
+      } else {
+        shoes[i].favorite = true;
+        FavoriteElement.style.color = "red";
+        FavoriteElement.style.animation = "";
+        FavoriteElement.offsetWidth;
+        FavoriteElement.style.animation = "size 1s linear";
+      }
+
+      saveToLocalStorage(shoes);
+    };
 
     addButtonEllement.onclick = (e) => {
       if (shoes[i].isSelected) {
@@ -58,10 +77,12 @@ function createShoes(shoes) {
       saveToLocalStorage(shoes);
       document.getElementById("demo").innerText = sum;
     };
+
     shoesEllementDiv.classList.add("shoesImage");
     const buttonDivEllement = document.createElement("div");
     buttonDivEllement.appendChild(addButtonEllement);
     buttonDivEllement.appendChild(contact);
+    buttonDivEllement.appendChild(FavoriteElement);
     buttonDivEllement.classList.add("buttonDiv");
 
     shoesEllementDiv.onmouseenter = (e) => {
@@ -93,7 +114,9 @@ function createShoes(shoes) {
         addButtonEllement.style.display = "";
       }
     };
-
+    if (shoes[i].favorite) {
+      FavoriteElement.style.color = "red";
+    }
     shoesEllementDiv.onmouseleave = (e) => {
       contact.style.borderRadius = "25px";
       contact.style.opacity = "0.6";
@@ -119,7 +142,6 @@ function createShoes(shoes) {
       addButtonEllement.style.left = "50%";
 
       addButtonEllement.style.display = "block";
-      // shoesEllementImg.style.filter = "  drop-shadow(0 0 1rem green)";
     }
 
     const imgDivEllement = document.createElement("div");

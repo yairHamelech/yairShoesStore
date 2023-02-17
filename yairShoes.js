@@ -1,10 +1,43 @@
 function saveToLocalStorage(shoes) {
   localStorage.setItem("shoes", JSON.stringify(shoes));
 }
-
+let count = 1;
 if (!localStorage.getItem("shoes")) saveToLocalStorage(shoes);
 const currentShoes = JSON.parse(localStorage.getItem("shoes"));
 createShoes(currentShoes);
+
+function favorite() {
+  count++;
+  const shoesElements = document.getElementsByClassName("shoes");
+
+  const AllFavorite = document.getElementById("favorite");
+  if (count % 2 == 0) {
+    for (let i = 0; i < currentShoes.length; i++) {
+      AllFavorite.style.background = "rgb(255, 249, 239)";
+
+      if (currentShoes[i].favorite) {
+        shoesElements[i].style.display = "inline-block";
+      } else {
+        shoesElements[i].style.display = "none";
+      }
+    }
+
+    AllFavorite.onmouseleave = (e) => {
+      AllFavorite.style.background = "rgb(255, 249, 239)";
+    };
+  } else {
+    AllFavorite.onmouseenter = (e) => {
+      AllFavorite.style.background = "white";
+    };
+    AllFavorite.onmouseleave = (e) => {
+      AllFavorite.style.background = "rgb(234, 217, 187)";
+    };
+    AllFavorite.style.background = "rgb(234, 217, 187)";
+    for (let i = 0; i < currentShoes.length; i++) {
+      shoesElements[i].style.display = "inline-block";
+    }
+  }
+}
 
 function searched() {
   const searched = document.getElementById("search_box_input").value;
