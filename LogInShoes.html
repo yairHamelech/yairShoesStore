@@ -6,6 +6,7 @@
     <title>Login / Sign Up shoes</title>
     <link rel="shortcut icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="LogInShoes.css" />
+    <link rel="stylesheet" href="all.css" />
   </head>
   <body>
     <div class="topnav">
@@ -36,7 +37,7 @@
       <div class="container">
         <form class="form" id="login">
           <h1 class="form__title">Login on shoes!</h1>
-          <div class="form__message form__message--error"></div>
+
           <div class="form__input-group">
             <input
               type="text"
@@ -44,7 +45,6 @@
               autofocus
               placeholder="Username or email"
             />
-            <div class="form__input-error-message"></div>
           </div>
           <div class="form__input-group">
             <input
@@ -53,7 +53,6 @@
               autofocus
               placeholder="Password"
             />
-            <div class="form__input-error-message"></div>
           </div>
           <button class="form__button" type="submit">Continue</button>
           <p class="form__text">
@@ -68,7 +67,6 @@
         <form class="form form--hidden" id="createAccount">
           <h1 class="form__title">sign up on shoes!</h1>
 
-          <div class="form__message form__message--error"></div>
           <div class="form__input-group">
             <input
               type="text"
@@ -78,7 +76,36 @@
               autofocus
               placeholder="Username"
             />
-            <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+            <input
+              type="text"
+              pattern="(?=.*[a-z]{4,})(?=.*[A-Z]).{6,}"
+              title="Must contain at least one uppercase, four lowercase letter, and at least 6 or more characters"
+              class="form__input"
+              autofocus
+              placeholder="hobies"
+            />
+          </div>
+          <div class="form__input-group">
+            <input
+              type="text"
+              pattern="(?=.*[a-z]{4,})(?=.*[A-Z]).{6,}"
+              title="Must contain at least one uppercase, four lowercase letter, and at least 6 or more characters"
+              class="form__input"
+              autofocus
+              placeholder="where you live"
+            />
+          </div>
+          <div class="form__input-group">
+            <input
+              type="text"
+              pattern="(?=.*[a-z]{4,})(?=.*[A-Z]).{6,}"
+              title="Must contain at least one uppercase, four lowercase letter, and at least 6 or more characters"
+              class="form__input"
+              autofocus
+              placeholder="your name"
+            />
           </div>
           <div class="form__input-group">
             <input
@@ -111,7 +138,7 @@
                 <span>female</span>
               </label>
             </div>
-            <p class="birth">birth date</p>
+
             <input type="date" />
 
             <div class="form__input-error-message"></div>
@@ -124,6 +151,15 @@
           </p>
         </form>
       </div>
+    </div>
+    <div class="downnav">
+      <a href="buyingCart.html" class="everyadown">buying cart</a>
+
+      <a href="aboat.html" class="everyadown">about</a>
+
+      <a href="refound.html" class="everyadown">refund</a>
+
+      <a href="LogInShoes.html" class="everyadown">log in / sign up</a>
     </div>
     <script src="LogInShoes.js"></script>
   </body>

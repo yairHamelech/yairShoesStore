@@ -2,16 +2,6 @@
   box-sizing: border-box;
 }
 
-.topnav {
-  background-color: rgb(234, 217, 187);
-  align-items: center;
-  font-weight: 900;
-}
-.top {
-  display: flex;
-  justify-content: space-between;
-}
-
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -19,19 +9,6 @@
   to {
     transform: rotate(356deg);
   }
-}
-
-.menu {
-  float: left;
-  color: rgb(0, 0, 0);
-
-  padding: 25px 20px;
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(72, 72, 72);
 }
 
 body {
@@ -54,7 +31,6 @@ body {
 .imgDiv {
   position: relative;
   width: 100%;
-  /* -webkit-filter: brightness(75%); */
 
   transition: all 1s ease;
 }
@@ -106,6 +82,11 @@ body {
   border-radius: 40px;
   background-color: rgb(234, 217, 187);
   float: left;
+  transition: 0.2s;
+  border: solid rgb(234, 217, 187);
+}
+.search_box:hover {
+  background-color: white;
 }
 
 input {
@@ -155,7 +136,7 @@ button {
 }
 
 .shoes:hover {
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 .details {
   justify-content: space-between;
@@ -176,7 +157,7 @@ button {
   color: rgb(0, 0, 0);
   padding: 16px;
   font-size: 16px;
-  border: none;
+  transition: 0.2s;
   border: solid rgb(234, 217, 187);
   cursor: pointer;
 }
@@ -203,7 +184,7 @@ button {
   background: #fff;
   border-radius: 50%;
   left: 83%;
-  box-shadow: 0px 0px 5px rgb(112, 112, 112);
+
   display: inline-block;
   margin: 0 0 15px;
   color: #aaa;

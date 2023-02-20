@@ -9,8 +9,8 @@
   --color-error: #cc3333;
   --color-success: #4bb544;
   --border-radius: 4px;
-
-  height: 88vh;
+  width: 100%;
+  height: 78vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,6 +18,7 @@
   background: url(./background.jpg);
   background-size: cover;
 }
+
 .topnav {
   background-color: rgb(234, 217, 187);
   align-items: center;
@@ -43,7 +44,6 @@
 
 .container {
   max-width: 400px;
-
   padding: 2rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
@@ -193,7 +193,7 @@
   position: absolute;
   content: "";
   top: 4px;
-  left: 4px;
+
   width: 12px;
   height: 12px;
   background: #009579;

@@ -1,34 +1,6 @@
 * {
   box-sizing: border-box;
-}
 
-.topnav {
-  background-color: rgb(234, 217, 187);
-  align-items: center;
-  font-weight: 900;
-}
-.top {
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu {
-  float: left;
-  color: rgb(0, 0, 0);
-
-  padding: 25px 20px;
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(72, 72, 72);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 .contact {

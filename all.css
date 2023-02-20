@@ -1,0 +1,31 @@
+.downnav {
+  top: 96%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+}
+.everyadown {
+  text-decoration: none;
+
+  margin: 5px;
+}
+.topnav {
+  background-color: rgb(234, 217, 187);
+  align-items: center;
+  font-weight: 900;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  float: left;
+  color: rgb(0, 0, 0);
+
+  padding: 25px 20px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+}
