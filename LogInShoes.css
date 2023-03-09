@@ -15,31 +15,8 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  background: url(./background.jpg);
+
   background-size: cover;
-}
-
-.topnav {
-  background-color: rgb(234, 217, 187);
-  align-items: center;
-  font-weight: 900;
-}
-.top {
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu {
-  float: left;
-  color: rgb(0, 0, 0);
-
-  padding: 25px 20px;
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(72, 72, 72);
 }
 
 .container {

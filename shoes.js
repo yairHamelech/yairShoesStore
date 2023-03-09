@@ -5,7 +5,7 @@ shoes = [
     catagories: ["basketball"],
     price: 349.93,
     contact:
-      "adidas D Rose Son Of Chi II 2 50pts Black Green Men Basketball Shoes GY6496",
+      "adidas D Rose Son Of Chi II 2 50pts Black Green Men Basketball Shoes GY6496,it was derrick rose`s signature shoe after nike gave him a signature shoe for being the youngest mvp in history of the nba",
     image: "https://megasport.co.il/media/catalog/product/a/d/adgy6496_4_.jpg",
     favorite: false,
   },
@@ -150,4 +150,15 @@ shoes = [
       "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/w_467,c_limit/a62021ab-4d0f-4c05-8132-f362566e1d97/flex-runner-2-older-road-running-shoes-Ft61jb.png",
     favorite: false,
   },
+  // {
+  //   label: "adidas",
+  //   catagories: ["run", "leisure"],
+  //   name: " ZX 8000 Lego sneakers",
+  //   price: 6789.9,
+  //   contact:
+  //     "adidas relaunches the A-ZX collection, and with it, 26 models that pay tribute to the legacy of the legendary ZX saga. Including these new ZX 8000 created in collaboration with LEGO - the famous Danish brand of interlocking bricks founded in 1932 by Ole Kirk. ",
+  //   image:
+  //     "https://cdn-images.farfetch-contents.com/17/14/54/90/17145490_34953019_1000.jpg",
+  //   favorite: false,
+  // },
 ];

@@ -7,7 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="buyingCart.css" />
-    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="bars.css" />
+    <link rel="stylesheet" href="shoes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://css.gg/close.css" rel="stylesheet" />
   </head>
   <body>
     <div class="topnav">
@@ -15,11 +26,9 @@
         ><img src="assets/homeLogo.png" style="width: 25px; height: 25px"
       /></a>
 
-      <a class="menu" href="aboat.html" style="padding: 25px 20px">about </a>
+      <a class="menu" href="aboat.html">about </a>
       <div class="top">
-        <a class="menu" href="refound.html" style="padding: 25px 20px"
-          >refound
-        </a>
+        <a class="menu" href="refound.html">refound </a>
         <a href="LogInShoes.html">
           <img
             src="assets/loginLogo.png.png"
@@ -39,134 +48,118 @@
     </div>
     <hr />
     <div id="panel">
-      <div class="row divPay">
-        <div class="column2 c1">
-          <h2 style="margin-bottom: 10px">Summary</h2>
-
-          <img src="assets/storeLogo.png" class="imgResumen" />
-
-          <div class="totalTxt">
-            <h3 style="color: #a9abae">Total</h3>
-            <h1 id="total"></h1>
-          </div>
-        </div>
-        <div class="column2 c2">
-          <h2 style="margin-bottom: 10px">Payment</h2>
-
-          <div class="card" id="divCard">
-            <div class="card-content">
-              <img
-                style="display: none"
-                id="imgFranchise"
-                class="logoFranquicia"
-              />
-              <div class="infoTarjeta">
-                <h5>Card Number</h5>
-                <h6 id="cardNumber">0000 0000 0000 0000</h6>
-                <h5>Expiration<span class="cvvStyle">CVV</span></h5>
-                <h6>
-                  <span id="cardMonth">00</span>
-                  <span id="cardYear">0000</span
-                  ><span class="cvvStyle2" id="cardCVV">000</span>
-                </h6>
-              </div>
-            </div>
-          </div>
-
-          <br />
-          <div style="width: 100%; margin: auto">
-            <div style="width: 50%; display: inline-block">
-              <b>Cardholder</b>
-            </div>
-            <input
-              type="text"
-              id="pagarTarjetaTit"
-              placeholder="Cardholder"
-              maxlength="16"
-              style="width: 100%"
-            />
-          </div>
-
-          <div style="width: 100%; margin: auto">
-            <div style="width: 50%; display: inline-block">
-              <b>Card Number</b>
-            </div>
-            <input
-              type="number"
-              id="pagarTarjetaNum"
-              placeholder="Eg. 1111222233334444"
-              style="width: 100%"
-              maxlength="16"
-              oninput="showCN()"
-            />
-          </div>
-
-          <div style="width: 100%; margin: auto">
-            <div style="width: 50%; display: inline-block">
-              <b>Expiration</b>
-            </div>
-
-            <div class="row">
-              <div class="column">
-                <div style="width: 100%; display: inline-block">
-                  <b>Month</b>
-                </div>
+      <div class="container">
+        <form class="form-horizontal" role="form">
+          <fieldset>
+            <legend class="headForm">
+              <h1>Payment</h1>
+              <a class="close" id="close"><i class="gg-close"></i></a>
+            </legend>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="card-holder-name"
+                >Name</label
+              >
+              <div class="col-sm-9">
                 <input
-                  type="number"
-                  id="pagarTarjetaMes"
-                  placeholder="Eg. 03"
-                  min="01"
-                  max="12"
-                  style="width: 80%"
-                  oninput="showCE()"
-                />
-              </div>
-              <div class="column">
-                <div style="width: 100%; display: inline-block">
-                  <b>Year</b>
-                </div>
-                <input
-                  type="number"
-                  id="pagarTarjetaAno"
-                  placeholder="Eg. 2024"
-                  min="2020"
-                  max="2100"
-                  style="width: 80%"
-                  oninput="showCE()"
+                  type="text"
+                  class="form-control"
+                  name="card-holder-name"
+                  id="card-holder-name"
+                  placeholder="Card Holder's Name"
                 />
               </div>
             </div>
-          </div>
-
-          <div style="width: 100%; margin: auto">
-            <div style="width: 50%; display: inline-block"><b>CVV</b></div>
-            <input
-              type="number"
-              id="pagarTarjetaCVV"
-              placeholder="Eg. 123"
-              min="001"
-              max="9999"
-              style="width: 50%"
-              oninput="showCV()"
-            />
-          </div>
-
-          <button title="Make payment" type="submit">Make payment</button>
-        </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="card-number"
+                >Number</label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="card-number"
+                  id="card-number"
+                  pattern=".{8,}"
+                  placeholder="Debit/Credit Card Number"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="expiry-month"
+                >Expiration</label
+              >
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <select
+                      class="form-control col-sm-2"
+                      name="expiry-month"
+                      id="expiry-month"
+                    >
+                      <option>Month</option>
+                      <option value="01">Jan (01)</option>
+                      <option value="02">Feb (02)</option>
+                      <option value="03">Mar (03)</option>
+                      <option value="04">Apr (04)</option>
+                      <option value="05">May (05)</option>
+                      <option value="06">June (06)</option>
+                      <option value="07">July (07)</option>
+                      <option value="08">Aug (08)</option>
+                      <option value="09">Sep (09)</option>
+                      <option value="10">Oct (10)</option>
+                      <option value="11">Nov (11)</option>
+                      <option value="12">Dec (12)</option>
+                    </select>
+                  </div>
+                  <div class="col-xs-6">
+                    <select class="form-control col-sm-2" name="expiry-year">
+                      <option value="17">2017</option>
+                      <option value="18">2018</option>
+                      <option value="19">2019</option>
+                      <option value="20">2020</option>
+                      <option value="21">2021</option>
+                      <option value="22">2022</option>
+                      <option value="23">2023</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
+              <div class="col-sm-6">
+                <input
+                  type="number"
+                  class="form-control"
+                  name="cvv"
+                  id="cvv"
+                  placeholder="Security Code"
+                />
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <div class="col-sm-12">
+                <button type="submit" class="btn btn-success" id="pay-now">
+                  <p>Pay Now</p>
+                  <p id="total"></p>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
       </div>
-
-      <br />
     </div>
 
     <div id="shoesCollection" href="#"></div>
-    <div class="downnav">
-      <a href="buyingCart.html" class="everyadown">buying cart</a>
+    <div class="everyadown">
+      <a href="buyingCart.html">buying cart</a>
 
-      <a href="aboat.html" class="everyadown">about</a>
+      <a href="aboat.html">about</a>
 
-      <a href="refound.html" class="everyadown">refund</a>
+      <a href="refound.html">refund</a>
 
-      <a href="LogInShoes.html" class="everyadown">log in / sign up</a>
+      <a href="LogInShoes.html">log in / sign up</a>
     </div>
   </body>
   <script src="shoes.js"></script>

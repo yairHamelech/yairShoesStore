@@ -3,6 +3,7 @@ const currentShoes = shoes.filter((shoes) => shoes.isSelected);
 const shoesEllements = document.getElementById("shoesCollection");
 shoesEllements.classList.add("scrollbar");
 let clickCount = 0;
+let closed = document.getElementById("close");
 
 let total = document.getElementById("total");
 createShoes(currentShoes);
@@ -30,30 +31,6 @@ document.querySelector(".btn").addEventListener("click", function (btn) {
     document.getElementById("panel").style.display = "block";
   }
 });
-function showCN() {
-  var i = document.getElementById("pagarTarjetaNum").value;
-  document.getElementById("cardNumber").innerHTML = i;
-
-  if (i.length == 16) {
-    document.getElementById("pagarTarjetaMes").focus();
-  }
-}
-
-function showCE() {
-  var im = document.getElementById("pagarTarjetaMes").value;
-  var iy = document.getElementById("pagarTarjetaAno").value;
-  document.getElementById("cardMonth").innerHTML = im;
-  document.getElementById("cardYear").innerHTML = iy;
-
-  if (im.length == 2) {
-    document.getElementById("pagarTarjetaAno").focus();
-  }
-  if (iy.length == 4) {
-    document.getElementById("pagarTarjetaCVV").focus();
-  }
-}
-
-function showCV() {
-  var i = document.getElementById("pagarTarjetaCVV").value;
-  document.getElementById("cardCVV").innerHTML = i;
-}
+document.querySelector(".close").addEventListener("click", function (closed) {
+  document.getElementById("panel").style.display = "none";
+});

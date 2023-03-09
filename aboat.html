@@ -2,29 +2,33 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>About us Page</title>
+    <title>X - company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="hellowrld" />
     <link rel="stylesheet" href="about.css" />
-    <link rel="stylesheet" href="all.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="bars.css" />
   </head>
   <body>
     <div class="topnav">
       <a class="menu" href="index.html"
         ><img src="assets/homeLogo.png" style="width: 25px; height: 25px"
       /></a>
-      <a class="menu" href="buyingCart.html"
-        ><img src="assets/buyingCartLogo.png" style="width: 25px; height: 25px"
-      /></a>
+      <div>
+        <a class="menu" href="buyingCart.html " style="position: relative"
+          ><img
+            id="cartLogo"
+            src="assets/buyingCartLogo.png"
+            style="width: 25px; height: 25px" />
+          <p id="demo" class="sum"></p
+        ></a>
+      </div>
+      <a class="menu" href="refound.html">refund</a>
+
       <div class="top">
         <a class="menu" href="aboat.html">about</a>
+
         <a href="LogInShoes.html">
           <img
             src="assets/loginLogo.png.png"
@@ -33,57 +37,117 @@
         </a>
       </div>
     </div>
-
-    <div class="main-box">
-      <div class="content" id="open">
-        <input type="checkbox" id="check" />
-        <label class="box" for="check">
-          <div class="share">MORE</div>
-          <div class="cancel">LESS</div>
-        </label>
-        <div class="image-box">
+    <div id="home" class="content">
+      <h2>About Us</h2>
+      <p>
+        shoe match - company is commited to delivering innovative products to
+        the marketplace. It is the number one priority of every GENECRAFT
+        associate to ensure that our breakthroughs in quality and value will
+        result in complete customer satisfaction.
+      </p>
+      <h3>Our workers:</h3>
+      <div style="display: flex; height: 130px">
+        <img
+          src="https://www.shareicon.net/data/256x256/2016/01/24/708382_people_512x512.png"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqDXXwV6YWd31Z6iIi1MxbJoYJuFnS9bwgmw&usqp=CAU"
+        />
+        <img
+          src="https://cdn.dribbble.com/users/3430321/screenshots/6390024/shot-cropped-1556175146329.png?compress=1&resize=400x300&vertical=top"
+        />
+        <img
+          src="https://media.istockphoto.com/id/903044512/vector/user-icon-vector-with-laptop-computer-female-person-profile-avatar-for-business-and-online.jpg?s=612x612&w=0&k=20&c=iLtKPgwQGblmh9pOgJxVDepyCYyxYnV29j5WEP28rOo="
+        />
+      </div>
+      <p></p>
+      <ul style="color: white">
+        <li>PCR and PCR-based technologies;</li>
+        <li>cDNA technologies;</li>
+        <li>gene analysis;</li>
+        <li>and nucleic acid chemistry.</li>
+      </ul>
+      <br />
+    </div>
+    <div id="samples" class="panel">
+      <div class="content">
+        <h2>about yair - CEO</h2>
+        <p>hello, my name is yair.</p>
+        <p>I learn in keshet high school and I am shoeses CEO & Founder.</p>
+        <p>
+          I learn computer science at school and i know several computers
+          languages.
+        </p>
+        <p>also, I am learning 5 units of math English and physics.</p>
+        <div style="display: flex; margin-top: 50px; height: 150px">
+          <img src="https://www.tomorrowsuccess.com/keshetm.jpg" />
+          <img src="https://pycon-2017.python.ph/images/sponsors/psf.svg" />
           <img
-            src="./assets/MikmakShirt_20220707_183.jpg"
-            alt="yair"
-            style="width: 100%"
+            src="https://www.developer.com/wp-content/uploads/2021/09/Java-tutorials.jpg"
           />
-
-          <div class="about">
-            <div class="details">
-              <div class="name">Yair David</div>
-              <div class="job">Shoeses CEO</div>
-              <div class="icon">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </div>
-              <p class="aboutDiv" onclick="show()">about me</p>
-              <p class="aboutDiv">about us</p>
-            </div>
-          </div>
+          <img
+            src="https://static.javatpoint.com/images/javascript/javascript_logo.png"
+          />
         </div>
       </div>
     </div>
-
-    <div class="Aboutus" id="AboutUs">
-      <p>hello, my name is yair.</p>
-      <p>I learn in keshet high school and I am shoeses CEO & Founder.</p>
-      <p>
-        I learn computer science at school and i know several computers
-        languages.
-      </p>
-      <p>also, I am learning 5 units of math English and physics.</p>
+    <div id="offers" class="panel">
+      <div class="content">
+        <h4>Special Offers</h4>
+        <h3>log in and get:</h3>
+        <p>
+          favorite form! yes, you coud add your favorite shoes to your favorite
+          lists and then have an easy accent to them
+        </p>
+        <p>
+          in addition, you will get a description on every shoe, which surly
+          will make your shopping experience better and match for your
+          personality
+        </p>
+        <hr />
+        <h3>get premium</h3>
+        <p>
+          a faster order, yes! a faster order on every shoe you will order! and
+          you will see the best lunches for every shoe, so you wont buy a shoe
+          on an expensive and unnecesery place!
+        </p>
+        <p>
+          and you will see the best lunches for every shoe, so you wont buy a
+          shoe on an expensive and unnecesery place!
+        </p>
+      </div>
     </div>
-    <div class="downnav">
-      <a href="buyingCart.html" class="everyadown">buying cart</a>
+    <div id="contact" class="panel">
+      <div class="content">
+        <h2>Contacts</h2>
+        <p>
+          When she reached the first hills of the Italic Mountains, she had a
+          last view back on the skyline of her hometown Bookmarksgrove, the
+          headline of Alphabet Village and the subline of her own road, the Line
+          Lane.
+        </p>
+        <p>
+          Pityful a rethoric question ran over her cheek, then she continued her
+          way. On her way she met a copy.
+        </p>
+      </div>
+    </div>
+    <div id="header">
+      <ul id="navigation">
+        <li><a id="link-home" href="#home" class="button-1">About US</a></li>
+        <li>
+          <a id="link-samples" href="#samples" class="button-1"
+            >about yair David - CEO</a
+          >
+        </li>
+        <li>
+          <a id="link-offers" href="#offers" class="button-1">Special Offers</a>
+        </li>
 
-      <a href="aboat.html" class="everyadown">about</a>
-
-      <a href="refound.html" class="everyadown">refund</a>
-
-      <a href="LogInShoes.html" class="everyadown">log in / sign up</a>
+        <li>
+          <a id="link-contact" href="#contact" class="button-1">Contacts</a>
+        </li>
+      </ul>
     </div>
   </body>
-  <script src="about.js"></script>
 </html>
