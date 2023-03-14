@@ -1,0 +1,47 @@
+.shoesImage {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  transform: scale(0.95);
+  filter: brightness(90%);
+  border-radius: 15px;
+}
+.shoesImageDiv {
+  position: relative;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.shoes {
+  overflow: visible;
+  margin-left: 4em;
+  margin-top: 3em;
+  display: inline-block;
+  width: 300px;
+  position: relative;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+
+  transition: 0.2s;
+  border-radius: 15px;
+}
+
+.shoes:hover .shoesImageDiv {
+  transform: translateY(-50px);
+}
+
+.shoes:hover {
+}
+
+.alldetails {
+  transform: scale(0.95);
+}
+
+.details {
+  justify-content: space-between;
+  width: 300px;
+  display: flex;
+}
+
+.shoesName {
+  font-weight: 600;
+}

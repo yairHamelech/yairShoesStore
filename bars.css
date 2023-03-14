@@ -11,7 +11,6 @@ body {
 .topnav {
   background-color: rgb(234, 217, 187);
   align-items: center;
-  font-weight: 900;
 }
 .top {
   display: flex;
@@ -19,6 +18,7 @@ body {
 }
 
 .menu {
+  font-weight: 600;
   float: left;
   color: rgb(0, 0, 0);
 
@@ -39,10 +39,12 @@ body {
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  padding: 11px 16px;
+  padding: 1px 2px;
   text-decoration: none;
 }
 .everyadown a:hover {
   background-color: white;
   color: black;
+}
+.navigationBar {
 }
