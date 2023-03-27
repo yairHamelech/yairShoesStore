@@ -7,7 +7,7 @@ shoes = [
     contact:
       "adidas D Rose Son Of Chi II 2 50pts Black Green Men Basketball Shoes GY6496,it was derrick rose`s signature shoe after nike gave him a signature shoe for being the youngest mvp in history of the nba",
     image: "https://megasport.co.il/media/catalog/product/a/d/adgy6496_4_.jpg",
-
+    image2: "assets/shoes/2/dRoseImage2.jpg",
     favorite: false,
   },
   {
@@ -16,9 +16,8 @@ shoes = [
     catagories: ["football"],
     price: 100,
     contact: "Nike TIEMPO LEGEND 9 ACADEMY MG DA1174-001",
-    image:
-      "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.3/w_467,c_limit/c5d8edc7-4c67-4d37-842e-9421d74ff65f/tiempo-legend-9-club-mg-multi-ground-football-boots-glRTSw.png",
-    image2: "dRoseImage2.jpg",
+    image: "assets/shoes/3/shoes.webp",
+
     favorite: false,
   },
   {
@@ -28,12 +27,9 @@ shoes = [
     price: 200,
     contact:
       "Celebrate with nostalgia. Adidas Continental 80 shoes preserve all the retro vibe of the leather sneakers from the 80s. The split rubber sole and the stripe in both colors complete the winning look. A fresh French fabric lining completes the cozy nostalgic construction.",
-    image:
-      "https://assets.adidas.com/images/w_1880,f_auto,q_auto/8df5ab4346d7475ebb08a91500a047d3_9366/G27706_01_standard.jpg",
-    image2:
-      "https://cdn.shopify.com/s/files/1/0631/4167/5262/products/7f7b0845201043beb667a5ed012690d3_9366_800x.webp?v=1675582961",
-    image3:
-      "https://cdn.shopify.com/s/files/1/0631/4167/5262/products/Club_C_85_Shoes_White_AR0455_01_standard_800x.jpg?v=1675582937",
+    image: "assets/shoes/4/shoes1.webp",
+    image2: "assets/shoes/4/shoes2.webp",
+    image3: "assets/shoes/4/shoes3.webp",
     favorite: false,
   },
   {

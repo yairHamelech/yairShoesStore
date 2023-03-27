@@ -12,7 +12,6 @@
   transition: all 0.4s ease;
 }
 .shoes {
-  overflow: visible;
   margin-left: 4em;
   margin-top: 3em;
   display: inline-block;
